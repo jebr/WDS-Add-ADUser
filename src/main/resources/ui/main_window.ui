@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>513</width>
+    <width>506</width>
     <height>640</height>
    </rect>
   </property>
@@ -19,14 +19,14 @@
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>491</width>
-      <height>581</height>
+      <width>480</width>
+      <height>640</height>
      </rect>
     </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="tab_add_user">
      <attribute name="title">
       <string>Gebruiker toevoegen</string>
      </attribute>
@@ -48,47 +48,61 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="domainLineEdit"/>
+        <widget class="QLineEdit" name="domainLineEdit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+        </widget>
        </item>
-       <item row="1" column="0">
+       <item row="2" column="0">
         <widget class="QLabel" name="voornaamLabel">
          <property name="text">
           <string>Voornaam</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="2" column="1">
         <widget class="QLineEdit" name="voornaamLineEdit"/>
        </item>
-       <item row="2" column="0">
+       <item row="3" column="0">
         <widget class="QLabel" name="tussenvoegselLabel">
          <property name="text">
           <string>Tussenvoegsel</string>
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
+       <item row="3" column="1">
         <widget class="QLineEdit" name="tussenvoegselLineEdit"/>
        </item>
-       <item row="3" column="0">
+       <item row="4" column="0">
         <widget class="QLabel" name="achternaamLabel">
          <property name="text">
           <string>Achternaam</string>
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
+       <item row="4" column="1">
         <widget class="QLineEdit" name="achternaamLineEdit"/>
        </item>
-       <item row="4" column="0">
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBox">
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
         <widget class="QLabel" name="afdelingOULabel">
          <property name="text">
           <string>Afdeling (OU)</string>
          </property>
         </widget>
        </item>
-       <item row="4" column="1">
-        <widget class="QLineEdit" name="afdelingOULineEdit"/>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="loginnaamLineEdit"/>
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="loginnaamLabel">
@@ -96,9 +110,6 @@
           <string>Loginnaam</string>
          </property>
         </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLineEdit" name="loginnaamLineEdit"/>
        </item>
        <item row="6" column="0">
         <widget class="QLabel" name="eMailadresLabel">
@@ -120,6 +131,22 @@
        <item row="7" column="1">
         <widget class="QLineEdit" name="wachtwoordLineEdit"/>
        </item>
+       <item row="8" column="0" colspan="2">
+        <widget class="QPlainTextEdit" name="plainTextEdit_error">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QPushButton" name="pushButton">
@@ -136,7 +163,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="tab_add_ou">
      <attribute name="title">
       <string>Organizational unit (OU) toevoegen</string>
      </attribute>
@@ -148,12 +175,30 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>513</width>
+     <width>506</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionInfo"/>
+    <addaction name="actionUpdate"/>
+   </widget>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionInfo">
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
+  <action name="actionUpdate">
+   <property name="text">
+    <string>Update WDS</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
