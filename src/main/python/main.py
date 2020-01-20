@@ -158,6 +158,7 @@ class InfoWindow(QDialog):
         info_icon = QPixmap(resource_path('../icons/logo.png'))
         info_icon = info_icon.scaledToWidth(40)
         self.label_info_logo.setPixmap(info_icon)
+        # TODO Nakijken of dit nog nodig is na het nieuwe onwerp
         if 'Darwin' in what_os:
             self.label_info_logo.move(70, 20)
         else:
